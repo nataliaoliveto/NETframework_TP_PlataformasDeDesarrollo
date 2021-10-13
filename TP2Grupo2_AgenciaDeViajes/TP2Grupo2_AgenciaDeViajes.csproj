@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Clases\Alojamientos.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Imagenes\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="EasyEncryption" Version="1.0.2" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.7">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="AdminForms\AdminReservas.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="AdminForms\AdminUsuarios.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Registro.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+		<Compile Update="UserForms\UserReservas.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="UserForms\UserPerfil.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="UserForms\UserAlojamientos.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="UserForms\UserMain.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
